@@ -1,0 +1,12 @@
+{
+  "exclude": [
+    "**/__pycache__"
+  ],
+  "include": [
+    "toolbox"
+  ],
+  "pythonPlatform": "Linux",
+  "pythonVersion": "3.12",
+  "venv": ".venv",
+  "venvPath": "."
+}
