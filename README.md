@@ -9,7 +9,7 @@ as a handy SDK for the developer’s daily work.
 
 ```bash
 # update package manager
-pip install --upgrade pip wheels virtualenv
+python -m pip install --upgrade pip wheel setuptools virtualenv
 
 # create virtual environment
 virtualenv .venv
