@@ -1,5 +1,10 @@
 # 🧰 Toolbox
 
+This package was developed to provide simple and fast dependencies instrumentation,
+as a handy SDK for the developer’s daily work.
+
+[hatch](https://hatch.pypa.io/1.13/)
+
 ## Contributing
 
 ```bash
