@@ -1,0 +1,59 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.sdist]
+include = [
+    "toolbox"
+]
+
+[tool.hatch.build.targets.wheel]
+include = [
+    "toolbox"
+]
+
+[project]
+name = "toolbox"
+version = "0.1.0"
+requires-python = ">=3.11"
+# description = ""
+authors = [
+    {name = "Luiz Felipe Ferraresi", email = "fake@email.com"}
+]
+readme = {"file" = "README.md", "content-type" = "text/markdown"}
+# keywords = ["python", "package"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+dependencies = [
+    "pydantic>=2.0.0",
+    "pydantic-settings>=2.10.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/LuizFerraresi/toolbox"
+Repository = "https://github.com/LuizFerraresi/toolbox"
+Documentation = "https://github.com/LuizFerraresi/toolbox#readme"
+
+[project.optional-dependencies]
+cache = [
+    "redis>=6.2.0"
+] 
+broker = [
+    "aiokafka>=0.11.0"
+]
+postgres = [
+    "SQLAlchemy[asyncio]==2.0.43",
+    "psycopg2-binary==2.9.10",
+    "asyncpg==0.30.0"
+]
+all = [
+    "toolbox[cache,broker,postgres]"
+]
