@@ -1,0 +1,2 @@
+targets: ['toolbox']
+exclude_dirs: ['.venv', 'tests']
